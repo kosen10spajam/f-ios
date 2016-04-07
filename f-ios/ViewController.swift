@@ -29,5 +29,12 @@ class ViewController: UIViewController, UIWebViewDelegate {
         return true
     }
 
+    @IBAction func refreshButtonTapped(sender: AnyObject) {
+        self.webView.reload()
+    }
+
+    @IBAction func backButtonTapped(sender: AnyObject) {
+        self.webView.goBack()
+    }
 }
 

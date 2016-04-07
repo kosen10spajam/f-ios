@@ -17,17 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bso-u3-rf7">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="x5C-cC-Gdx"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="reply" id="Xk3-dp-URm">
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="Idj-iI-DDL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="refresh" id="7do-66-bAI">
+                                        <connections>
+                                            <action selector="refreshButtonTapped:" destination="BYZ-38-t0r" id="mNq-p5-ZkN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-5L-iUb">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="ho1-5L-iUb" secondAttribute="trailing" constant="-20" id="AKq-mp-1zb"/>
-                            <constraint firstItem="ho1-5L-iUb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wb8-yZ-GS9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ho1-5L-iUb" secondAttribute="bottom" id="cBV-GS-Uvd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bso-u3-rf7" secondAttribute="trailing" constant="-20" id="IqC-8q-lb8"/>
+                            <constraint firstItem="bso-u3-rf7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QHD-zh-W8G"/>
                             <constraint firstItem="ho1-5L-iUb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="hDJ-A4-w8O"/>
+                            <constraint firstItem="ho1-5L-iUb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="i1i-PL-8fP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bso-u3-rf7" secondAttribute="bottom" id="sDp-oI-7Yl"/>
+                            <constraint firstItem="bso-u3-rf7" firstAttribute="top" secondItem="ho1-5L-iUb" secondAttribute="bottom" id="sFK-ee-Eiu"/>
                         </constraints>
                     </view>
                     <connections>
